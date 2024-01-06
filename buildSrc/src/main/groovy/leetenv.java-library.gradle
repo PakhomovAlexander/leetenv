@@ -1,0 +1,13 @@
+plugins {
+    id 'leetenv.java-common'
+    id 'java-library'
+}
+
+group = 'com.apakhomov'
+version = '0.0.1'
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}

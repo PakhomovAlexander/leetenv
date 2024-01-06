@@ -1,0 +1,8 @@
+plugins {
+    id 'leetenv.java-library'
+    //id 'me.champeau.jmh' version '0.7.2' does not work :(
+}
+
+dependencies {
+    implementation project(':core')
+}
