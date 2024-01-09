@@ -18,6 +18,7 @@ rootProject.name = 'leetenv'
 
 include 'core'
 include 'problems:problem-55'
+include 'problems:problem-35'
 
 findProject(':problems:problem-55')?.name = 'problem-55'
 
