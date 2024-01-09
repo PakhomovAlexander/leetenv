@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ParameterContext;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.converter.ArgumentConversionException;
+import org.junit.jupiter.params.converter.ArgumentConverter;
+import org.junit.jupiter.params.converter.ConvertWith;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class SolutionTest {
 
@@ -15,28 +21,14 @@ class SolutionTest {
         solution = new Solution3();
     }
 
-    @Test
-    void test1() {
-        int[] input = intArr("[2,3,1,1,4]");
-        var expectedOutput = true;
-
-        assertEquals(solution.canJump(input), expectedOutput);
-    }
-
-    @Test
-    void test2() {
-        int[] input = intArr("[3,2,1,0,4]");
-        var expectedOutput = false;
-
-        assertEquals(solution.canJump(input), expectedOutput);
-    }
-
-    @Test
-    void test3() {
-        int[] input = intArr("[2,0,0]");
-        var expected = true;
-
-        assertEquals(solution.canJump(input), expected);
+    @ParameterizedTest(name = "input: {0}, expected: {1}")
+    @CsvSource({
+            "'[2,3,1,1,4]', true",
+            "'[3,2,1,0,4]', false",
+            "'[2,0,0]',     true",
+    })
+    void testCases(@ConvertWith(IntArrConverter.class) int[] input, boolean expected) {
+       assertEquals(solution.canJump(input), expected);
     }
 
     @Test
@@ -45,6 +37,19 @@ class SolutionTest {
         var expected = false;
 
         assertEquals(solution.canJump(input), expected);
+    }
+
+    public static class IntArrConverter implements ArgumentConverter {
+
+        @Override
+        public Object convert(Object source, ParameterContext parameterContext) throws ArgumentConversionException {
+            if (!(source instanceof String)) {
+                throw new IllegalArgumentException(
+                        "The argument should be a string: " + source);
+            }
+
+            return intArr((String) source);
+        }
     }
 
 }
