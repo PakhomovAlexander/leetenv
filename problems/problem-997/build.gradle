@@ -1,0 +1,4 @@
+plugins {
+    id 'leetenv.java-problem-module'
+    id 'me.champeau.jmh' version '0.7.2'
+}
