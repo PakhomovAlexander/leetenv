@@ -14,7 +14,7 @@ package problem.solution;
  * Bench.oneBenchmark:oneBenchmark·p0.9999  sample          0.001            s/op
  * Bench.oneBenchmark:oneBenchmark·p1.00    sample          0.002            s/op
  */
-public class Solution3 implements Solution {
+public class Solution553 implements Solution55 {
     @Override
     public boolean canJump(int[] nums) {
         int i = nums.length - 1; // start from the finish.

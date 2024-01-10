@@ -40,7 +40,7 @@ import java.util.HashSet;
 
 /**
  * This is a first version of solution that uses pure recursion.
- * Modified version of {@link Solution1} with visited points optimisation.
+ * Modified version of {@link Solution551} with visited points optimisation.
  *
  * Benchmark                                  Mode  Cnt  Score   Error  Units
  * Bench.oneBenchmark                       sample   13  0.777 ± 0.074   s/op
@@ -53,7 +53,7 @@ import java.util.HashSet;
  * Bench.oneBenchmark:oneBenchmark·p0.9999  sample       0.918           s/op
  * Bench.oneBenchmark:oneBenchmark·p1.00    sample       0.918           s/op
  */
-public class Solution2 implements Solution {
+public class Solution552 implements Solution55 {
 
     @Override
     public boolean canJump(int[] nums) {

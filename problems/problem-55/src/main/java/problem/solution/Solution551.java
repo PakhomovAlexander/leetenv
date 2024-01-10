@@ -40,7 +40,7 @@ package problem.solution;
  * This is a first version of solution that uses pure recursion.
  * Does not pass load test.
  */
-public class Solution1 implements Solution {
+public class Solution551 implements Solution55 {
 
     @Override
     public boolean canJump(int[] nums) {

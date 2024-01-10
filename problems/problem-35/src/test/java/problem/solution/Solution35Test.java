@@ -4,7 +4,6 @@ import static com.apakhomov.leetenv.core.converters.InputConverters.intArr;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
@@ -12,13 +11,13 @@ import org.junit.jupiter.params.converter.ArgumentConverter;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class SolutionTest {
+class Solution35Test {
 
-    Solution solution;
+    Solution35 solution;
 
     @BeforeEach
     void setUp() {
-        solution = new SolutionBinarySearch();
+        solution = new Solution35BinarySearch();
     }
 
     @ParameterizedTest(name = "input: {0}, target: {1}, expected: {2}")

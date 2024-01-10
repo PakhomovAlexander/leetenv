@@ -1,6 +1,6 @@
 package problem.solution;
 
-public class SolutionBinarySearch implements Solution {
+public class Solution35BinarySearch implements Solution35 {
     @Override
     public int searchInsert(int[] nums, int target) {
         int l = 0;

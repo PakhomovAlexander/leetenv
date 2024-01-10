@@ -36,7 +36,7 @@ package problem.solution;// @leetup=custom
 // @leetup=custom
 // @leetup=code
 
-public interface Solution {
+public interface Solution35 {
     int searchInsert(int[] nums, int target);
 }
 // @leetup=code

@@ -1,7 +1,5 @@
 package problem.bench;
 
-import static com.apakhomov.leetenv.core.converters.InputConverters.intArr;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -12,7 +10,6 @@ import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
-import problem.solution.Solution;
 import problem.solution.Solution1;
 import problem.solution.Solution2;
 import problem.solution.Solution3;
