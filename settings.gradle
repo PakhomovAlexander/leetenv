@@ -17,6 +17,7 @@ pluginManagement {
 rootProject.name = 'leetenv'
 
 include 'core'
+include 'testenv'
 include 'problems:problem-55'
 include 'problems:problem-35'
 include 'problems:problem-997'
