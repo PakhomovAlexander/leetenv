@@ -1,0 +1,8 @@
+plugins {
+    id 'leetenv.java-junit5-extension'
+}
+
+dependencies {
+    implementation(project(':leetenv:core'))
+}
+

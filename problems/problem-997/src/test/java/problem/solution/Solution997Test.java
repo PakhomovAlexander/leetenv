@@ -19,9 +19,9 @@ class Solution997Test {
 
     @ParameterizedTest(name = "input: {0}, target: {1}, expected: {2}")
     @CsvSource({
-            "2, '[[1,2]]', 2",
-            "3, '[[1,3],[2,3]]', 3",
-            "3, '[[1,3], [2,3], [3,1]]', -1",
+            "2, '[[1,2]]',              2",
+            "3, '[[1,3],[2,3]]',        3",
+            "3, '[[1,3],[2,3],[3,1]]', -1",
     })
     void testCases(int n, @ConvertWith(IntMatrixConverter.class) int[][] input, int expected) {
         assertEquals(expected, solution.findJudge(n, input));

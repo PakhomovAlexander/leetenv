@@ -4,6 +4,6 @@ plugins {
 }
 
 dependencies {
-    implementation project(':core')
-    implementation project(':testenv')
+    implementation project(':leetenv:core')
+    implementation project(':leetenv:testenv')
 }

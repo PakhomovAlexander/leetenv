@@ -16,8 +16,15 @@ pluginManagement {
 }
 rootProject.name = 'leetenv'
 
-include 'core'
-include 'testenv'
+// Leetenv core components
+include ':leetenv:core'
+include ':leetenv:testenv'
+
+findProject(':leetenv:core')?.name = 'core'
+findProject(':leetenv:testenv')?.name = 'testenv'
+
+
+// Leetcode problem solutions
 include 'problems:problem-55'
 include 'problems:problem-35'
 include 'problems:problem-997'
@@ -25,4 +32,5 @@ include 'problems:problem-997'
 findProject(':problems:problem-55')?.name = 'problem-55'
 findProject(':problems:problem-35')?.name = 'problem-35'
 findProject(':problems:problem-997')?.name = 'problem-997'
+
 

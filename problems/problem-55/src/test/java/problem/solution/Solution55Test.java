@@ -8,7 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class SolutionTest {
+class Solution55Test {
 
     Solution55 solution55;
 
