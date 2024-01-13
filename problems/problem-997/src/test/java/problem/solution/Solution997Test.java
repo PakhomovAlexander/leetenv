@@ -2,7 +2,8 @@ package problem.solution;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.apakhomov.leetenv.core.converters.IntMatrixConverter;
+import com.apakhomov.leetenv.jupiter.annotations.IntMatrix;
+import com.apakhomov.leetenv.jupiter.converters.IntMatrixConverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
@@ -23,7 +24,7 @@ class Solution997Test {
             "3, '[[1,3],[2,3]]',        3",
             "3, '[[1,3],[2,3],[3,1]]', -1",
     })
-    void testCases(int n, @ConvertWith(IntMatrixConverter.class) int[][] input, int expected) {
+    void testCases(int n, @IntMatrix int[][] input, int expected) {
         assertEquals(expected, solution.findJudge(n, input));
     }
 }
