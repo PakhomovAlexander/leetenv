@@ -1,7 +1,6 @@
 # leetenv
 
-[![Run all tests](https://github.com/PakhomovAlexander/leetenv/actions/workflows/run-all-tests.yml/badge.svg?event=push)]
-(https://github.com/PakhomovAlexander/leetenv/actions/workflows/run-all-tests.yml)
+![Run all tests](https://github.com/PakhomovAlexander/leetenv/actions/workflows/run-all-tests.yml/badge.svg?event=push)
 
 leetenv is an environment for solving leetcode problems with unit tests, performance tests and pleasure.
 
