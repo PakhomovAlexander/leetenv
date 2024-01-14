@@ -28,7 +28,7 @@ class IntegerArrayListParserTest {
                 Arguments.of("[-1 ]", arrayList(-1)),
                 Arguments.of(" [9999]  ", arrayList(9999)),
                 Arguments.of("[1,2,,,4]", arrayList(1, 2, null, null, 4)),
-                Arguments.of("[,,]", arrayList(null, null, null))
+                Arguments.of("[, ,]", arrayList(null, null, null))
         );
     }
 
@@ -81,6 +81,7 @@ class IntegerArrayListParserTest {
             " -1",
             "[1,2,3 ",
             "[1,2,3, ",
+            "',[]'",
             "1,2,3]",
             "[[1]]",
             "[[]]",
@@ -88,7 +89,8 @@ class IntegerArrayListParserTest {
             "[not, an, integer, list]",
             "[1,2,word, 3]",
             "[1,2,3,4] 4",
-            "[1,2] should not be here"
+            "[1,2] should not be here",
+            "&"
     })
     void expectThrows(String input) {
         assertThrows(IntegerArrayListParseException.class, () -> parser.parse(input));
