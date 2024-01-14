@@ -28,6 +28,7 @@ findProject(':leetenv:testenv')?.name = 'testenv'
 include 'problems:problem-55'
 include 'problems:problem-35'
 include 'problems:problem-997'
+include 'problems:problem-15'
 
 findProject(':problems:problem-55')?.name = 'problem-55'
 findProject(':problems:problem-35')?.name = 'problem-35'
