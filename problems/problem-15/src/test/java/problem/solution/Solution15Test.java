@@ -1,14 +1,12 @@
 package problem.solution;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.apakhomov.leetenv.jupiter.annotations.IntArray;
-import com.apakhomov.leetenv.jupiter.annotations.IntegerMatrix;
+import com.apakhomov.leetenv.jupiter.annotations.Input;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
 
 class Solution15Test {
 
@@ -25,7 +23,7 @@ class Solution15Test {
             "'[0,1,1]', '[]'",
             "'[0,0,0]', '[[0,0,0]]'"
     })
-    void examples(@IntArray int[] input, @IntegerMatrix List<List<Integer>> expectedOutput) {
+    void examples(@Input int[] input, @Input List<List<Integer>> expectedOutput) {
         assertEquals(expectedOutput, solution.threeSum(input));
     }
 }

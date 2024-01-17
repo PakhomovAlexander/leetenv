@@ -2,12 +2,9 @@ package problem.solution;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.apakhomov.leetenv.jupiter.annotations.IntArray;
-import com.apakhomov.leetenv.jupiter.converters.IntArrayConverter;
+import com.apakhomov.leetenv.jupiter.annotations.Input;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.converter.ArgumentConverter;
-import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
@@ -26,7 +23,7 @@ class Solution55Test {
             "'[3,2,1,0,4]', false",
             "'[2,0,0]',     true",
     })
-    void testCases(@IntArray int[] input, boolean expected) {
+    void testCases(@Input int[] input, boolean expected) {
         assertEquals(solution55.canJump(input), expected);
     }
 }

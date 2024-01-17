@@ -29,10 +29,24 @@ Advanced features:
 - [ ] some central statistics server that will run all benchmarks and show statistics among all folks. 
 
 
-Small todos that can be a good first issue:
-- [ ] buildSrc/.../leetenv.java-problem-module.gradle should include jmh plugin but it does not work,
+### Small todos that can be a good first issue
+
+`buildSrc/.../leetenv.java-problem-module.gradle` should include jmh plugin but it does not work,
 I just add jmg plugin manually to each problem-* module. I believe there is some trick but I don't want
 to investigate too much time to it.
+
+The `@Input` annotation is required for any non-default input argument for parametrized tests, for example, 
+you can not have a test like `void test(int[] input)` because JUnit can not convert `@CsvSource` input into `int[]`.
+Leetenv solves this problem via `@Inut` annotation, so annotating input parameter says to JUnit that this parameter
+should be handled and converted by "some" converter (see 
+[UntypedArgumentConverter.java](leetenv%2Ftestenv%2Fsrc%2Fmain%2Fjava%2Fcom%2Fapakhomov%2Fleetenv%2Fjupiter%2Fconverters%2FUntypedArgumentConverter.java)]).
+
+The question is: Can we register the `UntypedArgumentConverter` without an explicit annotation? Answering this question would be 
+really useful.
+
+
+
+
 
 
 

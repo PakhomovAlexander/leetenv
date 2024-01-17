@@ -2,11 +2,9 @@ package problem.solution;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.apakhomov.leetenv.jupiter.annotations.IntArray;
-import com.apakhomov.leetenv.jupiter.converters.IntArrayConverter;
+import com.apakhomov.leetenv.jupiter.annotations.Input;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class Solution35Test {
@@ -26,7 +24,7 @@ class Solution35Test {
             "'[1,3,5,6]', 0, 0",
             "'[1,3]', 2, 1"
     })
-    void testCases(@IntArray int[] input, int target, int expected) {
+    void testCases(@Input int[] input, int target, int expected) {
         assertEquals(expected, solution.searchInsert(input, target));
     }
 }
