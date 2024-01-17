@@ -7,3 +7,5 @@ dependencies {
     implementation project(':leetenv:core')
     implementation project(':leetenv:testenv')
 }
+
+task('hello').dependsOn(build)
