@@ -33,5 +33,5 @@ include 'problems:problem-15'
 findProject(':problems:problem-55')?.name = 'problem-55'
 findProject(':problems:problem-35')?.name = 'problem-35'
 findProject(':problems:problem-997')?.name = 'problem-997'
-
+include 'algorithms'
 
